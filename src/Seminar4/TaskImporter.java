@@ -1,5 +1,7 @@
 package Seminar4;
 
+import java.util.List;
+
 public interface TaskImporter {
     /**
      * @param filePath файл
