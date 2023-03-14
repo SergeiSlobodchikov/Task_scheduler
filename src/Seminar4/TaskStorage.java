@@ -2,11 +2,11 @@ package Seminar4;
 
 import java.util.List;
 
-public interface TaskStorage {
+public interface TaskStorage<T extends Task> {
     /**
      * @param task Добавляем новую задачу
      */
-    void add(Task task);
+    void add(T task);
 
     /**
      * @param id удаляем задачу по индефекатару
@@ -16,10 +16,10 @@ public interface TaskStorage {
     /**
      * @param id получение задачи по индефекатару
      */
-    Task getById(int id);
+    T getById(int id);
 
     /**
      * @return получение списка всех задач
      */
-    List<Task> getAll();
+    List<T> getAll();
 }

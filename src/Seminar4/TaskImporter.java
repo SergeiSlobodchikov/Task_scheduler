@@ -2,10 +2,10 @@ package Seminar4;
 
 import java.util.List;
 
-public interface TaskImporter {
+public interface TaskImporter <T extends Task> {
     /**
      * @param filePath файл
      * @return импорт списка задач из файла.
      */
-    List<Task> importTasks(String filePath);
+    TaskManager<T> importTasks(String filePath);
 }

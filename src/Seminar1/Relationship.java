@@ -1,0 +1,26 @@
+package Seminar1;
+
+public enum Relationship {
+    PARENT,
+    CHILD,
+    SIBLING,
+    SPOUSE,
+    GRANDPARENT,
+    GRANDCHILD,
+    AUNT_UNCLE,
+    NEPHEW_NIECE,
+    COUSIN,
+    IN_LAW,
+    STEP_PARENT,
+    STEP_CHILD,
+    FOSTER_PARENT,
+    FOSTER_CHILD,
+    GODPARENT,
+    GODCHILD,
+    FRIEND,
+    PARTNER,
+    COLLEAGUE,
+    ACQUAINTANCE,
+    UNKNOWN
+}
+

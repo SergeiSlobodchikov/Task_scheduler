@@ -1,9 +1,12 @@
 package Seminar4;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 
 class Task {
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
     private static int nextId = 1;
     private int id;
     private LocalDateTime addedDateTime;
@@ -22,7 +25,7 @@ class Task {
         this.description = description;
     }
     public Task(int idnum, LocalDateTime addedDateTime, LocalDateTime deadlineDateTime, Priority priority, String authorName, String description) {
-        this.idnum = idnum;
+        this.id = idnum;
         this.addedDateTime = addedDateTime;
         this.deadlineDateTime = deadlineDateTime;
         this.priority = priority;
@@ -58,12 +61,16 @@ class Task {
         this.description = description;
     }
 
+    public void setDeadlineDateTime(LocalDateTime deadlineDateTime) {
+        this.deadlineDateTime = deadlineDateTime;
+    }
+
     @Override
     public String toString() {
         return "Task{" +
                 "id=" + id +
-                ", начало срока=" + addedDateTime +
-                ", крайний срок=" + deadlineDateTime +
+                ", начало срока=" + addedDateTime.format(DATE_FORMATTER) +
+                ", крайний срок=" + deadlineDateTime.format(DATE_FORMATTER) +
                 ", приоритет=" + priority +
                 ", имя автора='" + authorName + '\'' +
                 ", описание='" + description + '\'' +
