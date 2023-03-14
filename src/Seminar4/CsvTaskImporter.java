@@ -20,13 +20,12 @@ public class CsvTaskImporter implements TaskImporter<Task> {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
-                int id = Integer.parseInt(parts[0]);
                 LocalDateTime addedDateTime = LocalDateTime.parse(parts[1], DATE_FORMATTER);
                 LocalDateTime deadlineDateTime = LocalDateTime.parse(parts[2], DATE_FORMATTER);
                 Priority priority = Priority.valueOf(parts[3]);
                 String authorName = parts[4];
                 String description = parts[5];
-                taskManager.addTaskWithID(id, addedDateTime, deadlineDateTime, priority, authorName, description);
+                taskManager.addTask(addedDateTime, deadlineDateTime, priority, authorName, description);
             }
         } catch (IOException e) {
             e.printStackTrace();
