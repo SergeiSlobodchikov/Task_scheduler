@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6397426-5245-4ec7-ba41-48a90ee4d0fd" name="Changes" comment="Task Manager menu">
-      <change afterPath="$PROJECT_DIR$/src/Seminar4/TaskSearch.java" afterDir="false" />
+    <list default="true" id="e6397426-5245-4ec7-ba41-48a90ee4d0fd" name="Changes" comment="dorabotka">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar4/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar4/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar4/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/TaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +138,7 @@
       <workItem from="1678739727524" duration="151000" />
       <workItem from="1678772737883" duration="16588000" />
       <workItem from="1678806000863" duration="3448000" />
-      <workItem from="1678809525409" duration="3261000" />
+      <workItem from="1678809525409" duration="6579000" />
     </task>
     <task id="LOCAL-00001" summary="Task scheduler">
       <created>1678735468897</created>
@@ -201,7 +196,28 @@
       <option name="project" value="LOCAL" />
       <updated>1678793236848</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Task Manager menu">
+      <created>1678813126337</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678813126337</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Readme">
+      <created>1678813513878</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678813513878</updated>
+    </task>
+    <task id="LOCAL-00011" summary="dorabotka">
+      <created>1678816078919</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678816078919</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +239,9 @@
     <MESSAGE value="Task" />
     <MESSAGE value="Task Manager" />
     <MESSAGE value="Task Manager menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task Manager menu" />
+    <MESSAGE value="Readme" />
+    <MESSAGE value="dorabotka" />
+    <option name="LAST_COMMIT_MESSAGE" value="dorabotka" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
