@@ -4,35 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6397426-5245-4ec7-ba41-48a90ee4d0fd" name="Changes" comment="Task Manager">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OOP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar1/FileHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar1/GeoTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar1/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar1/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar1/Relationship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar1/Research.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar2/Seminar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar2/deistvia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar3/seminar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar4/CsvTaskExporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar4/CsvTaskImporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar4/InMemoryTaskStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar4/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar4/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar4/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar4/TaskExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/TaskExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar4/TaskImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/TaskImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar4/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/TaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar4/TaskStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar4/TaskStorage.java" afterDir="false" />
-    </list>
+    <list default="true" id="e6397426-5245-4ec7-ba41-48a90ee4d0fd" name="Changes" comment="Task Manager" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +110,7 @@
       <workItem from="1678381007165" duration="2993000" />
       <workItem from="1678730215694" duration="6283000" />
       <workItem from="1678739727524" duration="151000" />
-      <workItem from="1678772737883" duration="8956000" />
+      <workItem from="1678772737883" duration="9272000" />
     </task>
     <task id="LOCAL-00001" summary="Task scheduler">
       <created>1678735468897</created>
@@ -161,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678738087543</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Task Manager">
+      <created>1678782170335</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678782170335</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
