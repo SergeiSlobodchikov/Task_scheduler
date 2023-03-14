@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-    private static Scanner scanner = new Scanner(System.in);
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
 
     public static void menu() {
@@ -65,26 +64,19 @@ public class Menu {
                     }
                     break;
                 case 3:
-                    System.out.println("Введите id задачи");
-                    taskId = scanner.nextInt();
-                    if (taskManager.getTaskById(taskId) == null){
-                        System.out.println("Такой задачи нету");
-                    } else System.out.println(taskManager.getTaskById(taskId));
-
+                    TaskSearch.taskSearch(taskManager);
+                    break;
                 case 4:
                     System.out.println("Введите id задачи, которую нужно удалить");
                     taskId = scanner.nextInt();
-                    if (taskManager.getTaskById(taskId) == null){
+                    if (taskManager.getTaskById(taskId) == null) {
                         System.out.println("Такой задачи нету");
                     } else
                         System.out.println("Нажмите 1 для удаления :" + taskManager.getTaskById(taskId));
-                    switch (scanner.nextInt()) {
-                        case 1 -> {
-                            taskManager.removeTask(taskId);
-                            System.out.println("Задача удалена.");
-                        }
+                    if (scanner.nextInt() == 1) {
+                        taskManager.removeTask(taskId);
+                        System.out.println("Задача удалена.");
                     }
-
                     break;
                 case 5:
                     List<Task> tasks = taskManager.getAllTasks();
