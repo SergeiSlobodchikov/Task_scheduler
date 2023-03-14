@@ -1,7 +1,6 @@
 package Seminar4;
 
 import java.util.List;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
