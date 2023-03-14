@@ -67,5 +67,12 @@ class TaskManager<T extends Task> {
                 .filter(task -> task.getDeadlineDateTime().isAfter(startDateTime) && task.getDeadlineDateTime().isBefore(endDateTime))
                 .collect(Collectors.toList());
     }
+
+    public void setCurrentId(int num){
+        Task setID = null;
+        setID.setId(num);
+    }
+    
+
 }
 
