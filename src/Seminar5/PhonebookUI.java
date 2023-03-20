@@ -2,6 +2,7 @@ package Seminar5;
 
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 
 public class PhonebookUI {
@@ -109,7 +110,10 @@ public class PhonebookUI {
         System.out.println("Введите информацию о контакте, который ищете, можно часть");
         System.out.print("Имя, фамилия, номер телефона или email: ");
         String search = scanner.next();
-        phonebook.searchContacts(search);
+        List<Contact> searchContact = phonebook.searchContacts(search);
+        for (Contact contact : searchContact) {
+            System.out.println(contact.toString());
+        }
     }
 
     private void filePath(Scanner scanner){

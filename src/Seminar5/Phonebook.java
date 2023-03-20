@@ -10,9 +10,7 @@ import java.util.Scanner;
 
 public class Phonebook {
     private List<Contact> contacts;
-
     private String file = "contacts";
-
     private ExportFile exportFile;
     private ImportFile importFile;
 
@@ -37,46 +35,33 @@ public class Phonebook {
         }
     }
 
-
-    // метод для удаления контакта из справочника
-    public void removeContact(Contact contact) {
-        contacts.remove(contact);
-    }
-
-    public void removeContact(String firstName, String lastName, String phoneNumber, String email) {
-        contacts.remove(new Contact(firstName, lastName, phoneNumber, email));
-    }
-
     // Метод для удаления контакта
     public void removeContact(Scanner scanner) {
         System.out.println("Введите информацию о контакте, который нужно удалить:");
         System.out.print("Имя, фамилия, номер телефона или email: ");
-        String searchQuery = scanner.nextLine().trim();
-
-        List<Contact> contactsToRemove = new ArrayList<>();
-        for (Contact contact : contacts) {
-            if (contact.getFirstName().equalsIgnoreCase(searchQuery) ||
-                    contact.getLastName().equalsIgnoreCase(searchQuery) ||
-                    contact.getPhoneNumber().equalsIgnoreCase(searchQuery) ||
-                    contact.getEmail().equalsIgnoreCase(searchQuery)) {
-                contactsToRemove.add(contact);
-            }
-        }
-
+        String searchQuery = scanner.nextLine();
+        List<Contact> contactsToRemove = searchContacts(searchQuery);
         if (contactsToRemove.isEmpty()) {
             System.out.println("Контакт не найден.");
         } else {
             System.out.println("Найдены контакты: ");
-            for (Contact contact : contactsToRemove) {
-                System.out.println(contact);
+            for (int i = 0; i < contactsToRemove.size(); i++) {
+                System.out.println((i + 1) + ". " + contactsToRemove.get(i));
             }
-            System.out.print("Вы уверены, что хотите удалить эти контакты? (y/n): ");
-            String answer = scanner.nextLine().trim().toLowerCase();
-            if (answer.equals("y")) {
-                contacts.removeAll(contactsToRemove);
-                System.out.println("Контакты удалены.");
-            } else {
-                System.out.println("Удаление отменено.");
+            System.out.print("Введите номер контакта для удаления (0 для отмены): ");
+            try {
+                int index = Integer.parseInt(scanner.nextLine().trim()) - 1;
+                if (index >= 0 && index < contactsToRemove.size()) {
+                    Contact contactToRemove = contactsToRemove.get(index);
+                    contacts.remove(contactToRemove);
+                    System.out.println("Контакт удален: " + contactToRemove);
+                } else if (index == -1) {
+                    System.out.println("Удаление отменено.");
+                } else {
+                    System.out.println("Неверный номер контакта.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Неверный формат номера контакта.");
             }
         }
     }
@@ -108,15 +93,20 @@ public class Phonebook {
     }
 
     // Поиск контакта
-    public void searchContacts(String searchTerm) {
+    public List<Contact> searchContacts(String searchTerm) {
+        List<Contact> searchContact = new ArrayList<>();
         for (Contact contact : contacts) {
             if (contact.getFirstName().contains(searchTerm)
                     || contact.getLastName().contains(searchTerm)
                     || contact.getPhoneNumber().contains(searchTerm)
                     || contact.getEmail().contains(searchTerm)) {
-                System.out.println(contact.toString());
+                searchContact.add(contact);
             }
         }
+        if (searchContact.size() == 0){
+            System.out.println("Не найдено контактов");
+        }
+        return searchContact;
     }
 
     // Печать Контакта

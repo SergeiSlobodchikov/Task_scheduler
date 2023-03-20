@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6397426-5245-4ec7-ba41-48a90ee4d0fd" name="Changes" comment="Phonebook">
-      <change afterPath="$PROJECT_DIR$/src/Seminar5/ExploreFileTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar5/ExportFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar5/ImportFile.java" afterDir="false" />
+    <list default="true" id="e6397426-5245-4ec7-ba41-48a90ee4d0fd" name="Changes" comment="Phonebook 6 seminar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar5/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar5/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Seminar5/ContactsFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar5/ImportFileTo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Seminar5/Phonebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar5/Phonebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar5/PhonebookUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar5/PhonebookUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar5/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar5/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +166,8 @@
       <workItem from="1679252334075" duration="122000" />
       <workItem from="1679321995991" duration="651000" />
       <workItem from="1679338034791" duration="657000" />
-      <workItem from="1679339120902" duration="5043000" />
+      <workItem from="1679339120902" duration="5213000" />
+      <workItem from="1679344549551" duration="3373000" />
     </task>
     <task id="LOCAL-00001" summary="Task scheduler">
       <created>1678735468897</created>
@@ -269,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679064603583</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Phonebook 6 seminar">
+      <created>1679344379356</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679344379357</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +300,8 @@
     <MESSAGE value="dorabotka" />
     <MESSAGE value="menu" />
     <MESSAGE value="Phonebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Phonebook" />
+    <MESSAGE value="Phonebook 6 seminar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Phonebook 6 seminar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
