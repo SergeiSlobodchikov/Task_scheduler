@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6397426-5245-4ec7-ba41-48a90ee4d0fd" name="Changes" comment="Phonebook">
-      <change afterPath="$PROJECT_DIR$/.idea/bitrixlangplugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar5/Contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar5/ContactsFileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar5/Phonebook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar5/PhonebookUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar5/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Seminar5/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Seminar5/ExploreFileTo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Seminar5/ExportFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Seminar5/ImportFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar5/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar5/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar5/ContactsFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar5/ImportFileTo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seminar5/Phonebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seminar5/Phonebook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +164,12 @@
       <workItem from="1678900393280" duration="931000" />
       <workItem from="1678959340999" duration="1263000" />
       <workItem from="1678992363379" duration="3872000" />
-      <workItem from="1679037575111" duration="19917000" />
+      <workItem from="1679037575111" duration="20964000" />
+      <workItem from="1679129082559" duration="3099000" />
+      <workItem from="1679252334075" duration="122000" />
+      <workItem from="1679321995991" duration="651000" />
+      <workItem from="1679338034791" duration="657000" />
+      <workItem from="1679339120902" duration="5043000" />
     </task>
     <task id="LOCAL-00001" summary="Task scheduler">
       <created>1678735468897</created>
@@ -261,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678816436404</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Phonebook">
+      <created>1679064603583</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679064603583</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -10,10 +10,16 @@ import java.util.Scanner;
 
 public class Phonebook {
     private List<Contact> contacts;
-    private ContactsFileManager fileManager;
+
+    private String file = "contacts";
+
+    private ExportFile exportFile;
+    private ImportFile importFile;
+
     public Phonebook(String filePath) {
         this.contacts = new ArrayList<>();
-        this.fileManager = new ContactsFileManager(filePath);
+        this.exportFile = new ExploreFileTo(filePath);
+        this.importFile = new ImportFileTo(filePath);
     }
 
     // метод для добавления контакта в справочник
@@ -38,10 +44,10 @@ public class Phonebook {
     }
 
     public void removeContact(String firstName, String lastName, String phoneNumber, String email) {
-        contacts.remove(new Contact(firstName,lastName,phoneNumber,email));
+        contacts.remove(new Contact(firstName, lastName, phoneNumber, email));
     }
 
-
+    // Метод для удаления контакта
     public void removeContact(Scanner scanner) {
         System.out.println("Введите информацию о контакте, который нужно удалить:");
         System.out.print("Имя, фамилия, номер телефона или email: ");
@@ -76,11 +82,11 @@ public class Phonebook {
     }
 
     public void exportContactsToCsv() throws IOException {
-        fileManager.exportToCsv(contacts);
+        exportFile.exportToCsv(contacts, this.file);
     }
 
     public void importContactsFromCsv() throws IOException {
-        List<Contact> importedContacts = fileManager.importFromCsv();
+        List<Contact> importedContacts = importFile.importFromCsv(this.file);
         for (Contact contact : importedContacts) {
             if (!contacts.contains(contact)) {
                 contacts.add(contact);
@@ -89,7 +95,7 @@ public class Phonebook {
     }
 
     public void importContactsFromXml() throws IOException, XMLStreamException {
-        List<Contact> importedContacts = fileManager.importFromXml();
+        List<Contact> importedContacts = importFile.importFromXml(this.file);
         for (Contact contact : importedContacts) {
             if (!contacts.contains(contact)) {
                 contacts.add(contact);
@@ -98,9 +104,10 @@ public class Phonebook {
     }
 
     public void exportContactsToXml() throws IOException, XMLStreamException {
-        fileManager.exportToXml(contacts);
+        exportFile.exportToXml(contacts, this.file);
     }
 
+    // Поиск контакта
     public void searchContacts(String searchTerm) {
         for (Contact contact : contacts) {
             if (contact.getFirstName().contains(searchTerm)
@@ -112,6 +119,7 @@ public class Phonebook {
         }
     }
 
+    // Печать Контакта
     public void printAllContacts() {
         for (Contact contact : contacts) {
             System.out.println(contact.toString());

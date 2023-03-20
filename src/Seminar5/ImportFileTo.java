@@ -1,18 +1,23 @@
 package Seminar5;
 
-import java.io.IOException;
-import java.util.*;
-import javax.xml.stream.*;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamConstants;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
+public class ImportFileTo implements ImportFile {
 
-public class ContactsFileManager {
     private String filePath;
-    public ContactsFileManager(String filePath) {
+        public ImportFileTo(String filePath) {
         this.filePath = filePath;
     }
-
-    public List<Contact> importFromCsv() throws IOException {
+    @Override
+    public List<Contact> importFromCsv(String filePath) throws IOException {
         List<Contact> contacts = new ArrayList<>();
         Set<Contact> uniqueContacts = new HashSet<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath + ".csv"))) {
@@ -32,17 +37,7 @@ public class ContactsFileManager {
         return contacts;
     }
 
-    // метод для экспорта контактов в файл в формате CSV
-    public void exportToCsv(List<Contact> contacts) throws IOException {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath + ".csv"))) {
-            for (Contact contact : contacts) {
-                bw.write(contact.getFirstName() + "," + contact.getLastName() + "," + contact.getPhoneNumber() + "," + contact.getEmail());
-                bw.newLine();
-            }
-        }
-    }
-
-    public List<Contact> importFromXml() throws IOException, XMLStreamException {
+    public List<Contact> importFromXml(String filePath) throws IOException, XMLStreamException {
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
         InputStream inputStream = new FileInputStream(filePath + ".xml");
         XMLStreamReader xmlStreamReader = xmlInputFactory.createXMLStreamReader(inputStream);
@@ -89,33 +84,5 @@ public class ContactsFileManager {
             }
         }
         return contacts;
-    }
-
-    public void exportToXml(List<Contact> contacts) throws IOException, XMLStreamException {
-        XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
-        OutputStream outputStream = new FileOutputStream(filePath + ".xml");
-        XMLStreamWriter xmlStreamWriter = xmlOutputFactory.createXMLStreamWriter(outputStream);
-        xmlStreamWriter.writeStartDocument();
-        xmlStreamWriter.writeStartElement("contacts");
-        for (Contact contact : contacts) {
-            xmlStreamWriter.writeStartElement("contact");
-            xmlStreamWriter.writeStartElement("firstName");
-            xmlStreamWriter.writeCharacters(contact.getFirstName());
-            xmlStreamWriter.writeEndElement();
-            xmlStreamWriter.writeStartElement("lastName");
-            xmlStreamWriter.writeCharacters(contact.getLastName());
-            xmlStreamWriter.writeEndElement();
-            xmlStreamWriter.writeStartElement("phoneNumber");
-            xmlStreamWriter.writeCharacters(contact.getPhoneNumber());
-            xmlStreamWriter.writeEndElement();
-            xmlStreamWriter.writeStartElement("email");
-            xmlStreamWriter.writeCharacters(contact.getEmail());
-            xmlStreamWriter.writeEndElement();
-            xmlStreamWriter.writeEndElement();
-        }
-        xmlStreamWriter.writeEndElement();
-        xmlStreamWriter.writeEndDocument();
-        xmlStreamWriter.flush();
-        xmlStreamWriter.close();
     }
 }
